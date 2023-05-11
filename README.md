@@ -1,19 +1,20 @@
 # volttron-lib-modbustk-driver
 
-![Passing?](https://github.com/VOLTTRON/volttron-lib-modbustk-driver/actions/workflows/run_tests.yml/badge.svg)
-[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://VOLTTRON.github.io/volttron-lib-modbustk-driver/)
+![Eclipse VOLTTRON™](https://img.shields.io/badge/Eclipse%20VOLTTRON™-10.0.4rc-red.svg)
+![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)
+[!Passing?](https://github.com/VOLTTRON/volttron-lib-modbustk-driver/actions/workflows/run-tests.yml/badge.svg)
 [![pypi version](https://img.shields.io/pypi/v/volttron-lib-modbustk-driver.svg)](https://pypi.org/project/volttron-lib-modbustk-driver/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# Prerequisites
+## Prerequisites
 
-* Python 3.8
-* Poetry 1.2
+* Python 3.10+
+* Eclipse VOLTTRON<sup>tm</sup> 10.0+
 
-## Python
+### Python
 
 <details>
-<summary>To install Python 3.8, we recommend using <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>.</summary>
+<summary>To install Python 3.10, we recommend using <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>.</summary>
 
 ```bash
 # install pyenv
@@ -25,15 +26,15 @@ export PYENV_ROOT="${HOME}/.pyenv"
 eval "$(pyenv init -)"
 
 # install Python 3.8
-pyenv install 3.8.10
+pyenv install 3.10
 
 # make it available globally
-pyenv global system 3.8.10
+pyenv global system 3.10
 ```
 </details>
 
 
-## Poetry
+### Poetry
 
 This project uses `poetry` to install and manage dependencies. To install poetry,
 follow these [instructions](https://python-poetry.org/docs/master/#installation).
@@ -43,15 +44,15 @@ follow these [instructions](https://python-poetry.org/docs/master/#installation)
 With `pip`:
 
 ```shell
-python3.8 -m pip install volttron-lib-modbustk-driver
+python3.10 -m pip install volttron-lib-modbustk-driver
 
 # Develop mode
-python3.8 -m pip install --editable volttron-lib-modbustk-driver
+python3.10 -m pip install --editable volttron-lib-modbustk-driver
 ```
 
-# Development
+## Development
 
-## Environment
+### Environment
 
 Set the environment to be in your project directory:
 
@@ -75,7 +76,7 @@ poetry shell
 source "$(poetry env info --path)/bin/activate"
 ```
 
-## Source Control
+### Source Control
 
 1. To use git to manage version control, create a new git repository in your local agent project.
 
@@ -91,9 +92,9 @@ your Github or Gitlab account. This will be known as our 'remote'.
 When you push to your repo, note that the default branch is called 'main'.
 
 
-## Optional Configurations
+### Optional Configurations
 
-### Precommit
+#### Precommit
 
 Note: Ensure that you have created the virtual environment using Poetry
 
@@ -112,16 +113,7 @@ is an example:
 ```git commit -m "Some message" --no-verify```
 
 
-# Publishing to PyPi
-
-Publishing your Driver module to PyPi is automated through the continuous integration workflow provided in `~/.github/workflows/publish_to_pypi.yml`.
-You can update that Github Workflow with your credentials to ensure that publishing to PyPi will succeed. The default behavior of
-that workflow is to publish to PyPi when a release has been published. If you want to change this behavior, you can modify the
-workflow to publish to PyPi based on whatever desired event; see [Github Workflows docs](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow)
-on how to change the events that trigger a workflow.
-
-
-# Documentation
+## Documentation
 
 To build the docs, navigate to the 'docs' directory and build the documentation:
 
